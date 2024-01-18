@@ -5,5 +5,4 @@ pre-commit:
   commands:
     check-javadocs:
       tags: check javadocs
-      root: backend/
-      run: ./gradlew checkstyleMain -include=$(echo {staged_files} | sed 's/ /,/g') && git add {staged_files}
+      run: ./gradlew checkstyleMain -Dinclude=$(echo {staged_files} | sed 's/ /,/g') && git add {staged_files}
